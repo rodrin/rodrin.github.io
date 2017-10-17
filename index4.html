@@ -3,9 +3,12 @@
 
 
 
-<style class="cp-pen-styles">body {
+<style class="cp-pen-styles">
+/*
+    body {
   font-family: 'Wendy One', sans-serif;
 }
+*/
 span {
   text-transform: uppercase;
 }
@@ -16,8 +19,8 @@ span {
   position: relative;
 }
 .balloon > div {
-  width: 104px;
-  height: 140px;
+  width: 54px;
+  height: 90px;
   background: rgba(182, 15, 97, 0.9);
   border-radius: 0;
   border-radius: 80% 80% 80% 80%;
@@ -41,7 +44,7 @@ span {
 }
 .balloon > div:nth-child(2) {
   background: rgba(242, 112, 45, 0.9);
-  left: 120px;
+  left: 100px;
   box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
   -webkit-animation: balloon2 6s ease-in-out infinite;
   -moz-animation: balloon2 6s ease-in-out infinite;
@@ -53,7 +56,7 @@ span {
 }
 .balloon > div:nth-child(3) {
   background: rgba(45, 181, 167, 0.9);
-  left: 240px;
+  left: 200px;
   box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
   -webkit-animation: balloon4 6s ease-in-out infinite;
   -moz-animation: balloon4 6s ease-in-out infinite;
@@ -65,7 +68,7 @@ span {
 }
 .balloon > div:nth-child(4) {
   background: rgba(190, 61, 244, 0.9);
-  left: 360px;
+  left: 300px;
   box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.9);
   -webkit-animation: balloon1 5s ease-in-out infinite;
   -moz-animation: balloon1 5s ease-in-out infinite;
@@ -77,33 +80,58 @@ span {
 }
 .balloon > div:nth-child(5) {
   background: rgba(180, 224, 67, 0.9);
-  left: 480px;
+  left: 400px;
   box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
-  -webkit-animation: balloon3 5s ease-in-out infinite;
-  -moz-animation: balloon3 5s ease-in-out infinite;
-  -o-animation: balloon3 5s ease-in-out infinite;
-  animation: balloon3 5s ease-in-out infinite;
+  -webkit-animation: balloon3 4s ease-in-out infinite;
+  -moz-animation: balloon2 4s ease-in-out infinite;
+  -o-animation: balloon3 4s ease-in-out infinite;
+  animation: balloon1 4s ease-in-out infinite;
 }
 .balloon > div:nth-child(5):before {
   color: rgba(180, 224, 67, 0.9);
 }
 .balloon > div:nth-child(6) {
-  background: rgba(242, 194, 58, 0.9);
-  left: 600px;
-  box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.9);
-  -webkit-animation: balloon2 3s ease-in-out infinite;
+  background: rgba(182, 15, 97, 0.9);
+  left: 500px;
+  box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.9);
+  -webkit-animation: balloon2 6s ease-in-out infinite;
   -moz-animation: balloon2 3s ease-in-out infinite;
-  -o-animation: balloon2 3s ease-in-out infinite;
+  -o-animation: balloon2 5s ease-in-out infinite;
   animation: balloon2 3s ease-in-out infinite;
 }
 .balloon > div:nth-child(6):before {
+  color: rgba(182, 15, 97, 0.9);
+}
+.balloon > div:nth-child(7) {
+  background: rgba(45, 181, 167, 0.9);
+  left: 600px;
+  box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
+  -webkit-animation: balloon1 3s ease-in-out infinite;
+  -moz-animation: balloon4 2.5s ease-in-out infinite;
+  -o-animation: balloon4 2.5s ease-in-out infinite;
+  animation: balloon4 2.5s ease-in-out infinite;
+}
+.balloon > div:nth-child(7):before {
+  color: rgba(45, 181, 167, 0.9);
+}
+.balloon > div:nth-child(8) {
+  background: rgba(242, 194, 58, 0.9);
+  left: 700px;
+  box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.9);
+  -webkit-animation: balloon3 5s ease-in-out infinite;
+  -moz-animation: balloon3 5s ease-in-out infinite;
+  -o-animation: balloon3 5s ease-in-out infinite;
+  animation: balloon3 5s ease-in-out infinite;
+}
+.balloon > div:nth-child(8):before {
   color: rgba(242, 194, 58, 0.9);
 }
 .balloon > div:before {
   color: rgba(182, 15, 97, 0.9);
   position: absolute;
   bottom: -11px;
-  left: 52px;
+/*  left: 52px;*/
+  left: 27px;
   content: "▲";
   font-size: 1em;
 }
@@ -111,7 +139,7 @@ span {
   font-size: 4.8em;
   color: white;
   position: relative;
-  top: 30px;
+  top: 10px;
   left: 50%;
   margin-left: -27px;
 }
@@ -267,14 +295,15 @@ span {
 <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet" type="text/css">
 <div class="container">
   <div class="balloon">
-    <div><span>☺</span></div>
-    <div><span>B</span></div>
-    <div><span>D</span></div>
-    <div><span>A</span></div>
-    <div><span>Y</span></div>
-    <div><span>!</span></div>
+    <div><span>H</span></div>
+    <div><span>H</span></div>
+    <div><span>H</span></div>
+    <div><span>H</span></div>
+    <div><span>H</span></div>
+    <div><span>H</span></div>
+    <div><span>H</span></div>
+    <div><span>H</span></div>
   </div>
-  <h1>Kat</h1>
 </div>
 
 </body>
