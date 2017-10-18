@@ -386,6 +386,7 @@ span {
 
 }
 .polar > div {
+    text-align: center;
   background: rgba(182, 15, 97, 0.9);
   border-radius: 0;
   border-radius: 0% 0% 0% 0%;
@@ -411,6 +412,8 @@ span {
 	transition: all .15s linear;
 	z-index:0;
         position:relative;
+left: 25%;
+    right: 25%;
 }.polar > a:after {
     color: #333;
 	font-size: 20px;
