@@ -5,7 +5,7 @@
 <title>Bewegen</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-.parti{font-family:arial, helvetica; text-align:center;display:block;position: absolute}
+.parti{border-radius: 50%;font-family:arial, helvetica; text-align:center;display:block;position: absolute}
 </style>
 <script src="../js/jquery-1.7.2.min.js"></script>
 <script src="../js/jquery.moving-bubble.js"></script>
@@ -15,7 +15,7 @@ var hel = Array('h','e','l','v','e','t','c','a');
 $(document).ready(function (e) {
     //Add random divs as sample....
     //Change numberOfDivs if you want
-    var numberOfDivs = 10;
+    var numberOfDivs = 50;
 
     // add x number of divs to page.
     for (var i = 0; i < numberOfDivs; i++) {
@@ -25,9 +25,13 @@ $(document).ready(function (e) {
         var p = $('<div/>').addClass('c' + c).addClass('g' + g).addClass('parti');
         //Add object to body
         $('body').append(p);
-        $('body').append('<img src="Rossarin_Photo.gif" class="parti" width="500" height="500"/>');
     }
 
+        $('body').append('<img src="Rossarin_Photo.gif" class="parti" width="500" height="500"/>');
+        $('body').append('<img src="Rossarin_Photo.gif" class="parti" width="500" height="500"/>');
+        $('body').append('<img src="Rossarin_Photo.gif" class="parti" width="500" height="500"/>');
+        $('body').append('<img src="Rossarin_Photo.gif" class="parti" width="500" height="500"/>');
+        $('body').append('<img src="Rossarin_Photo.gif" class="parti" width="500" height="500"/>');
     //Add fish just for fun..... Try to click it!!!!
 //    $('body').append('<img src="visje.gif" class="parti" />');
     $('img').click(function () {
