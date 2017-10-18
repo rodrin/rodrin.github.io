@@ -378,7 +378,7 @@ span {
 </style>
 
 .polar {
-  width: 260px;
+  width: 2px;
   margin: 0 auto;
   padding-top: 30px;
   position: relative;
@@ -386,14 +386,14 @@ span {
 
 }
 .polar > div {
+    width: 10px;
     text-align: center;
-  background: rgba(182, 15, 97, 0.9);
+  background: white;
   border-radius: 0;
   border-radius: 0% 0% 0% 0%;
   margin: 0 auto;
   position: absolute;
   padding: 20px;
-  box-shadow: inset 17px 7px 10px rgba(182, 15, 97, 0.9);
   -webkit-transform-origin: bottom center;
 }
 .polar > a {
@@ -412,8 +412,10 @@ span {
 	transition: all .15s linear;
 	z-index:0;
         position:relative;
+/*
 left: 25%;
     right: 25%;
+*/
 }.polar > a:after {
     color: #333;
 	font-size: 20px;
@@ -424,6 +426,7 @@ left: 25%;
     display: block; 
 	width: inherit; 
 }
+/*
 .polar > div:nth-child(1) {
   background: white;
   left: 0;
@@ -436,6 +439,7 @@ left: 25%;
 .polar > div:nth-child(1):before {
   color: rgba(182, 15, 97, 0.9);
 }
+*/
 .span-polar {
   font-size: 1em;
   color: black;
@@ -452,7 +456,8 @@ left: 25%;
   left: -0%;
   margin-left: -32px;
 }
-/*BALLOON 1 4*/
+/*
+BALLOON 1 4
 @-webkit-keyframes polar1 {
   0%,
   100% {
@@ -489,6 +494,7 @@ left: 25%;
     transform: translateY(-20px) rotate(8deg);
   }
 }
+*/
 .polar > a:nth-child(2n)
 {
 	-webkit-transform: rotate(4deg);  
