@@ -382,6 +382,8 @@ span {
   margin: 0 auto;
   padding-top: 30px;
   position: relative;
+    display: inline-block;
+
 }
 .polar > div {
   background: rgba(182, 15, 97, 0.9);
@@ -524,3 +526,11 @@ span {
     margin-left: auto;
     margin-right: auto;
  }
+#inner {
+  display: table;
+  margin: 0 auto;
+}
+#outer {
+  width: 100%;
+  text-align: center;
+}
