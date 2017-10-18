@@ -1,14 +1,11 @@
 <?php
-if(isset($_POST['field1']) && isset($_POST['field2'])) {
-    $data = $_POST['field1'] . '-' . $_POST['field2'] . "\n";
-    $ret = file_put_contents('/tmp/mydata.txt', $data, FILE_APPEND | LOCK_EX);
-    if($ret === false) {
-        die('There was an error writing this file');
-    }
-    else {
-        echo "$ret bytes written to file";
-    }
-}
-else {
-   die('no post data to process');
-}
+    $title = $_POST["channel0Title"]; //You have to get the form data
+    $gain = $_POST["channel0Gain"];
+    $offset = $_POST["channel0Offset"];
+    $file = fopen('configurationSettings.txt', 'w+'); //Open your .txt file
+    ftruncate($file, 0); //Clear the file to 0bit
+    $content = $title. PHP_EOL .$gain. PHP_EOL .$offset;
+    fwrite($file , $content); //Now lets write it in there
+    fclose($file ); //Finally close our .txt
+    die(header("Location: ".$_SERVER["HTTP_REFERER"]));
+?>
