@@ -1,80 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Show Number of Available Parking lots</title>
-<style>
-table {
-    border-collapse: collapse;
-}
 
-table, td, th {
-    border: 2px solid black;
-    height: 50px;
-    text-align: center;
-    font-size: 30px;
-}
-div.head {
-    background-color: lightblue;
-    width: 600px;
-    padding:25px;
-    font-size: 40px;
-    color: #FFFFFF;
-    margin-bottom: 40px;
-}
-</style>
-</head>
-<body>
-<?php
-//echo "start";
-$servername = "localhost";
-$username = "root";
-$password = "GQ#h43Fe";
-$dbname = "parkhere";
+    <head>
 
-  //Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-  //Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+        <title>MIGHT's BIRTHDAY</title>
 
-$sql = "SELECT pId,pName,remain FROM parkArea";
-$result = $conn->query($sql);
-$sql2 = "SELECT A.pId, COUNT(B.pId) as reserve FROM reserve as A LEFT JOIN ( SELECT * FROM reserve WHERE date = CURRENT_DATE() and status = '0' ) as B on A.reserveId = B.reserveId GROUP by A.pId";
-$result2 = $conn->query($sql2);
-?>
-<div class=head align="center">ParkHere Application</div>
-<div align = "center">
-<table width="600">
-	  <tr>
-		<th width="220"> <div align="center">Parking Area</div></th>
-		<th width="100"> <div align="center">Available</div></th>
-	  </tr>
-<?php
-if ($result->num_rows > 0) {
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-      while($row = $result->fetch_assoc()){
-        $row2 = $result2->fetch_assoc()
-?>
-        <tr>
-      		<td><?php echo $row["pName"]; ?></td>
-      		<td><?php echo $row["remain"] - $row2["reserve"]; ?></td>
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
-	     </tr>
-    
- </table>
-</div>
-         <!-- echo $row['pId'] . "," . $row['pName'] . "," . $row['remain']. "\n"; -->
-<?php
-     }
- } else {
-   echo "0";
- }
- ?>
+        <!-- Custom styles for this template -->
+        <link href="css/grayscale.min.css" rel="stylesheet">
+        <link rel="icon" href="img/icon.jpg">
 
-<?php
-$conn->close();
-?>
-</body>
+
+    </head>
+
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">HBD</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#page-top">M</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Intro Header -->
+        <header class="masthead2">
+
+            <div class="intro-body">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+
+
+                            <section id="first" class="content-section text-center">
+                                <h1 class="brand-heading">HELLO</h1>
+                                <p class="intro-text">today is your birthday so this is a web for your 22nd birthday</p>
+
+                                <a href="#about" class="btn btn-circle js-scroll-trigger">
+                                    <i class="fa fa-angle-double-down animated"></i>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="content-section text-center">
+            <div class="container" >
+                <div class="row">
+
+                    <h1>eiei</h1>
+                </div>
+            </div>
+        </section>
+        <section class="content-section text-center" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Message from me</h2>
+                        <h3 class="section-subheading text-muted">I hope</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="team-member">
+                            <!--              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">-->
+                            <h4><br> rodrin</h4>
+                            <p class="text-muted">the person who want to see you hippy</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Download Section -->
+        <section id="download" class="download-section content-section text-center">
+            <div class="container">
+                <style type="text/css">
+                    .parti{
+                        margin: 10px;border: 1px solid black;border-radius: 50%;font-family:arial, helvetica; text-align:center;}
+                </style>
+
+                <div class="col-lg-8 mx-auto">
+
+                    <p>Please answer truthfully 5555+</p>
+                    <div class="col-lg-8 mx-auto">
+                        <form action="mailto:vvill@hotmail.co.th" method="POST" enctype="multipart/form-data" name="login">
+                            <input type="text" id="1" placeholder="" class="form-control"  />
+                            <input type="text" id="2" placeholder="" class="form-control" />
+                            <input type="text" id="3" placeholder="" class="form-control" />
+                            <input type="text" id="4" placeholder="" class="form-control" />
+                            <input type="text" id="5" placeholder="" class="form-control" />
+                            <button type="submit" onclick="generateBarCode()" value="Submit" class="btn btn-default btn-block btn-custom" color="white">SUBMIT</button>
+                        </form>
+                        <h1></h1>
+
+                        <script>
+                            function generateBarCode() 
+                            {
+                                var nric = $('#1').val()+'.';
+                                nric = nric + $('#2').val()+'.';
+                                nric = nric + $('#3').val()+'.';
+                                nric = nric + $('#4').val()+'.';
+                                nric = nric + $('#5').val()+'.';
+//                                form.username.value
+                                var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=500x500';
+                                $('#barcode').attr('src', url);
+                            }
+                        </script>
+
+
+                    </div>
+                    <h1></h1>
+                    <h1>Please capture this QR CODE and<br>send to me</h1>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="im-centered">
+                <div class="row" >
+                    <div class="col-lg-12 text-center">
+                        <div>
+                            <span class="copyright">MADE BY &hearts;</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/popper/popper.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="js/grayscale.min.js"></script>
+
+    </body>
+
 </html>
