@@ -70,62 +70,16 @@
 
             <!-- Download Section -->
             <div class="container">
+                
                 <style type="text/css">
                     .parti{
                         margin: 10px;border: 1px solid black;border-radius: 50%;font-family:arial, helvetica; text-align:center;}
 
                 </style>
-
-
-
-
-
-
-                <div align="left">
-                    <form action="mailto:vvill@hotmail.co.th" method="POST" enctype="multipart/form-data" name="login">
-                        <input type="text" id="1" placeholder="" class="form-control" style="height: 300px;width: 500px;float:left" />
-
-                    </form>
-                </div>
-
-                <div align="right">
-                    <div class="box-results" name="result" id="result" style="background-color:#000;height: 300px;width: 500px;"></div>
-                </div>
-                <button type="submit" onclick="generateBarCode()" value="Submit" class="btn btn-default btn-block btn-custom" color="white" >SUBMIT</button>
-
-
-                <form action="mailto:vvill@hotmail.co.th" method="POST" enctype="multipart/form-data" name="login">
-                    <input type="text" id="1" placeholder="" class="form-control"  />
-                    <input type="text" id="2" placeholder="" class="form-control" />
-                    <input type="text" id="3" placeholder="" class="form-control" />
-                    <input type="text" id="4" placeholder="" class="form-control" />
-                    <input type="text" id="5" placeholder="" class="form-control" />
-                    <input type="file" id="myFile">
-                    <button type="submit" onclick="generateBarCode()" value="Submit" class="btn btn-default btn-block btn-custom" color="white">SUBMIT</button>
-
-                </form>
-
-
-                <form action="{{ url_for('addRegion') }}" method="post">
-                    Project file path: <input type="text" name="projectFilePath"><br>
-                    <input type="submit" value="Submit">
-                </form>
-
-                <script>
-                    function generateBarCode() 
-                    {
-                        var nric = $('#1').val()+'.';
-                        nric = nric + $('#2').val()+'.';
-                        nric = nric + $('#3').val()+'.';
-                        nric = nric + $('#4').val()+'.';
-                        nric = nric + $('#5').val()+'.';
-                        //                                form.username.value
-                        var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=500x500';
-                        $('#barcode').attr('src', url);
-                    }
-                </script>
-
-
+                <form id="contact-form" action="/save", method="POST">
+        <p>color<input type = "text" name = "save" class="form-control"/></p>
+        <p><input type = "submit" value = "submit" /></p>
+</form>
             </div>
         </header>
 
